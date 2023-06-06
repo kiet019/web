@@ -1,11 +1,185 @@
-.fado-banner-img {
-    position: absolute;
-    width: inherit;
-    height: inherit;
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+.fado-box {
+  box-sizing: border-box;
+  position: relative;
 }
+/* Banner */
 .fado-banner {
-    position: relative;
-    height: 20rem;
-    width: 100%;
+  margin: 40rem auto 0rem;
+  position: relative;
+  height: 25rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-/* https://github.com/kiet019/web.git */
+.fado-banner-img {
+  position: absolute;
+  width: 100%;
+  height: 25rem;
+  object-fit: cover;
+  object-position: center;
+  z-index: 1;
+}
+.fado-banner-title {
+  z-index: 2;
+  color: white;
+  position: relative;
+  font-size: 5rem;
+}
+.fado-container {
+  max-width: 1220px;
+  margin: 2rem auto 10rem;
+}
+.fado-container-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 2rem;
+}
+.fado-container-search {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  max-width: 700px;
+  margin: 2rem auto 4rem;
+}
+/* Search box*/
+.search-container {
+  transform: scale(1.2);
+  position: relative;
+  display: inline-block;
+  border: 1px solid #eee;
+  border-radius: 5px;
+}
+.search-input {
+  font-size: 1.2rem;
+  padding-left: 4rem;
+  padding-right: 6rem;
+  height: 30px;
+  border: 0px;
+  border-right: 1px solid #eee;
+}
+.search-icon {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.material-icons {
+  font-size: 18px;
+  color: #999;
+}
+.search-button {
+  padding-left: 2rem;
+  padding-right: 2rem;
+  font-size: 1.2rem;
+  height: 30px;
+  border: 0px solid orangered;
+  border-left: 0px;
+  background-color: white;
+}
+/* Select box */
+.select-container {
+  transform: scale(1.2);
+  position: relative;
+  display: inline-block;
+  border: 1px solid #eee;
+  border-radius: 5px;
+}
+.select-option {
+  padding-left: 4rem;
+  padding-right: 6rem;
+  border: none;
+  border-radius: 4px;
+  height: 30px;
+  font-size: 1.2rem;
+}
+
+.location-icon {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  font-size: 18px;
+  color: #999;
+  pointer-events: none;
+}
+/* Page list */
+.fado-page-list {
+    display: flex;
+    justify-content: center;
+}
+.page-button {
+    background-color: white;
+    border: 0px;
+    font-size: medium;
+    font-weight: 700;
+    border-bottom: 1px solid #eee;
+    padding: 0rem 2rem 2rem 2rem;
+}
+/* Store container */
+.fado-store-container {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25% ;
+}
+.fado-store-link {
+    position: relative;
+    display: block;
+    text-decoration: none;
+    color: black;
+    height: 20rem;
+    cursor: pointer;
+    margin: 1rem;
+}
+.fado-store-img {
+    position: absolute;
+    width: 98%;
+    margin-left: 2%;
+    height: 17rem;
+    object-fit: cover;
+    object-position: center;
+    z-index: 1;
+    border-radius: 10px;
+}
+.fado-store-info {
+    position: absolute;
+    bottom: 0px;
+    font-size: large;
+    font-weight: 700;
+    margin-left: 2%;
+}
+.fado-store-sale {
+    position: absolute;
+    top: 8px;
+    z-index: 3;
+    color: white;
+    font-weight: 600;
+    background-color: #D11743;
+    padding: 3px 5px;
+    border-radius: 5px;
+    border-bottom-left-radius: 0px ;
+}
+.fado-store-sale-decoration {
+    position: absolute;
+    top: 32px;
+    background-color: #961332;
+    height: 4px;
+    width: 6px;
+    border-bottom-left-radius: 80%;
+}
+.fado-store-logo {
+    display: block;
+    position: absolute;
+    height: 17rem;
+    width: 98%;
+    padding: 4rem;
+    margin-left: 2%;
+    object-fit: cover;
+    object-position: center;
+    z-index: 2;
+}

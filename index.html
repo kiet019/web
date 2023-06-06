@@ -404,8 +404,110 @@
     </div>
 </section>
 <section>
-    <div class="fado-banner">
-        <img class="fado-banner-img" src="/images/banner.jpg"/>
+  <img class="fado-banner-img fado-box" src="/images/banner.jpg"/>
+  <div class="fado-banner fado-box">
+
+    <script type="module">
+      import { setup } from "./data.js";
+      var bannerTitle = document.querySelector('.fado-banner-title');
+      bannerTitle.textContent = setup.bannerTitle;
+    </script>
+    <div class="fado-banner-title"></div>
+
+    </div>
+    <div class="fado-container">
+
+      <script type="module">
+        import { setup } from "./data.js";
+        var containerContent = document.querySelector('.fado-container-content');
+        containerContent.textContent = setup.containerContent;
+      </script>
+      <div class="fado-container-content"></div>
+
+      <div class="fado-container-search">
+        <form class="search-container">
+          <input type="text" class="search-input" placeholder="Search for ...">
+          <span class="search-icon">
+            <i class="material-icons">search</i>
+          </span>
+          <button class="search-button">Search</button>
+        </form>
+        <form>
+
+          <div class="select-container">
+            <select id="selectOption" class="select-option"></select>
+            <script type="module">
+                import { setup } from "./data.js";
+                var selectElement = document.getElementById("selectOption");
+                setup.optionsList.forEach(function(option) {
+                  var optionElement = document.createElement("option");
+                  optionElement.value = option.value;
+                  optionElement.text = option.text;
+
+                  selectElement.appendChild(optionElement);
+                });
+            </script>
+            <i class="material-icons location-icon">location_on</i>
+          </div>
+
+        </form>
+      </div>
+      <form>
+
+        <script type="module">
+          import { setup } from "./data.js";
+          var pageListDiv = document.querySelector('.fado-page-list');
+          setup.page.forEach(function(button) {
+            var buttonElement = document.createElement('button');
+            buttonElement.classList.add('page-button');
+            buttonElement.setAttribute('value', button.index);
+            buttonElement.textContent = button.name;
+            pageListDiv.appendChild(buttonElement);
+          });
+        </script>
+        <div class="fado-page-list fado-box"></div>
+
+      </form>
+
+      <div class="fado-store-container">
+        <!-- <a class="fado-store-link fado-box">
+          <div class="fado-store-sale">UP TO 75% OFF</div>
+          <div class="fado-store-sale-decoration"></div>
+          <img class="fado-store-logo" src="/images/logo.jpg"/>
+          <img class="fado-store-img" src="/images/banner.jpg">
+          <div class="fado-store-info fado-box">Amazon</div>
+        </a>
+         -->
+         <script type="module">
+          import { setup } from "./data.js";
+          var storeContainer = document.querySelector(".fado-store-container");
+
+            setup.stores.forEach(function(store) {
+              var storeLink = document.createElement("a");
+              storeLink.classList.add("fado-store-link", "fado-box");
+              var saleText = document.createElement("div");
+              saleText.classList.add("fado-store-sale");
+              saleText.textContent = store.saleText;
+              var saleDecoration = document.createElement("div");
+              saleDecoration.classList.add("fado-store-sale-decoration");
+              var logoImg = document.createElement("img");
+              logoImg.classList.add("fado-store-logo");
+              logoImg.src = store.logoSrc;
+              var storeImg = document.createElement("img");
+              storeImg.classList.add("fado-store-img");
+              storeImg.src = store.imgSrc;
+              var infoText = document.createElement("div");
+              infoText.classList.add("fado-store-info", "fado-box");
+              infoText.textContent = store.infoText;
+              storeLink.appendChild(saleText);
+              storeLink.appendChild(saleDecoration);
+              storeLink.appendChild(logoImg);
+              storeLink.appendChild(storeImg);
+              storeLink.appendChild(infoText);
+              storeContainer.appendChild(storeLink);
+            });
+         </script>
+      </div>
     </div>
 </section>
     <!--Footer-->
