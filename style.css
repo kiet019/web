@@ -1,0 +1,11 @@
+.fado-banner-img {
+    position: absolute;
+    width: inherit;
+    height: inherit;
+}
+.fado-banner {
+    position: relative;
+    height: 20rem;
+    width: 100%;
+}
+/* https://github.com/kiet019/web.git */
