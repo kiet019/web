@@ -127,6 +127,13 @@ var setup = {
       infoText: "Store 1",
       href: "https://www.google.com/"
     },
+    {
+      saleText: "UP TO 75% OFF",
+      logoSrc: "logo.jpg",
+      imgSrc: "banner.jpg",
+      infoText: "Store 1",
+      href: "https://www.google.com/"
+    },
   ],
 };
 window.setup = setup;

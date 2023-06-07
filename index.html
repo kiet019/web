@@ -457,6 +457,7 @@
             var buttonElement = document.createElement('button');
             buttonElement.classList.add('page-button');
             buttonElement.setAttribute('value', button.index);
+            buttonElement.setAttribute('name', "type")
             buttonElement.textContent = button.name;
             pageListDiv.appendChild(buttonElement);
           });
@@ -468,7 +469,6 @@
       <div class="fado-store-container">
          <script type="module">
           var storeContainer = document.querySelector(".fado-store-container");
-
             setup.stores.forEach(function(store) {
               var storeLink = document.createElement("a");
               storeLink.classList.add("fado-store-link", "fado-box");
@@ -494,8 +494,24 @@
               storeLink.appendChild(infoText);
               storeContainer.appendChild(storeLink);
             });
-         </script>
+            </script>
       </div>
+      <form class="fado-store-pagination">
+        <script type="module">
+          var pageNumber = Math.floor(setup.stores.length / 12) + 1;
+          var storePagination = document.querySelector(".fado-store-pagination")
+          for ( i = 1; i<=pageNumber; i++) {
+            var storePagingButton = document.createElement("button");
+            storePagingButton.classList.add("fado-pagination-button");
+            storePagingButton.setAttribute("name", "page")
+            storePagingButton.setAttribute("value", i)
+            storePagingButton.textContent = i;
+            storePagination.appendChild(storePagingButton)
+          }
+          </script>
+      </form>
+
+
     </div>
 </section>
     <!--Footer-->
