@@ -47,14 +47,14 @@ var setup = {
       saleText: "UP TO 75% OFF",
       logoSrc: "logo.jpg",
       imgSrc: "banner.jpg",
-      infoText: "Store 1",
+      infoText: "Store 15",
       href: "https://www.google.com/"
     },
     {
       saleText: "UP TO 75% OFF",
       logoSrc: "logo.jpg",
       imgSrc: "banner.jpg",
-      infoText: "Store 1",
+      infoText: "Store 15",
       href: "https://www.google.com/"
     },
     {

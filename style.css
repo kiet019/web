@@ -5,7 +5,7 @@
 }
 /* Banner */
 .fado-banner {
-  margin: 40rem auto 0rem;
+  margin: 0rem auto 0rem;
   position: relative;
   height: 25rem;
   width: 100%;
@@ -126,6 +126,7 @@
     margin-top: 2rem;
     display: grid;
     grid-template-columns: 25% 25% 25% 25% ;
+    height: 660px
 }
 .fado-store-link {
     position: relative;
