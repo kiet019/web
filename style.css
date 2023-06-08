@@ -126,7 +126,6 @@
     margin-top: 2rem;
     display: grid;
     grid-template-columns: 25% 25% 25% 25% ;
-    height: 660px
 }
 .fado-store-link {
     position: relative;
