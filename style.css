@@ -143,7 +143,7 @@
     height: 17rem;
     object-fit: cover;
     object-position: center;
-    z-index: 1;
+    z-index: 0;
     border-radius: 10px;
 }
 .fado-store-info {
@@ -165,21 +165,30 @@
     border-bottom-left-radius: 0px ;
 }
 .fado-store-sale-decoration {
-    position: absolute;
-    top: 32px;
-    background-color: #961332;
-    height: 4px;
-    width: 6px;
-    border-bottom-left-radius: 80%;
+  position: absolute;
+  top: 32px;
+  background-color: #961332;
+  height: 4px;
+  width: 6px;
+  border-bottom-left-radius: 80%;
+}
+.overload{
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  width: 98%;
+  margin-left: 2%;
+  height: 17rem;
+  border-radius: 10px;
 }
 .fado-store-logo {
     display: block;
     position: absolute;
     height: 17rem;
     width: 98%;
-    padding: 4rem;
     margin-left: 2%;
-    object-fit: cover;
+    padding: 5rem;
+    object-fit: contain;
     object-position: center;
     z-index: 2;
 }
@@ -192,5 +201,7 @@
   background-color: white;
   border: 1px solid #eee;
   margin: 0px 1rem 0px 0rem;
-  padding: 2px 7px 2px 7px;
+  padding: 2px 7px 1px 7px;
+  border-radius: 5px;
+  font-size: small;
 }

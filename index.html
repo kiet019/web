@@ -3914,7 +3914,7 @@
         </form> -->
         <div class="fado-store-container">
           <script type="module">
-            var itemsPerPage = 12;
+            var itemsPerPage = 16;
             var originalData = setup.stores;
             displayData(1, originalData);
             $(".search-container").on("keydown submit", function(event) {
@@ -3955,6 +3955,8 @@
                 var saleDecoration = $("<div></div>").addClass(
                   "fado-store-sale-decoration"
                 );
+                var overload = $("<div></div>")
+                  .addClass("overload")
                 var logoImg = $("<img>")
                   .addClass("fado-store-logo")
                   .attr("src", store.logoSrc);
@@ -3970,7 +3972,8 @@
                   saleDecoration,
                   logoImg,
                   storeImg,
-                  infoText
+                  infoText,
+                  overload
                 );
                 $(".fado-store-container").append(storeLink);
               });
